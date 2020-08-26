@@ -17,7 +17,7 @@ os.system('kops create cluster \
 # Validating cluster setup.
 os.system('kops validate cluster --state=s3://starkware-state --name=myfirstcluster.k8s.local --wait 10m')
 
-# Deploying a NGINX server & LoadBalancer
+# Deploying a NGINX server & LoadBalancer (Nginx-elb service)
 os.system('kubectl create -f nginx_deployment.yaml')
 os.system('kubectl create -f nginx_service.yaml')
 
